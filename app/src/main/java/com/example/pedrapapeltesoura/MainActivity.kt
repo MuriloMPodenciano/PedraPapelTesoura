@@ -2,9 +2,6 @@ package com.example.pedrapapeltesoura
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pedrapapeltesoura.databinding.ActivityMainBinding
 

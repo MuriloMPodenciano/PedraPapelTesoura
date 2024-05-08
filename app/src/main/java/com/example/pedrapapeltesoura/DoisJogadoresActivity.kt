@@ -3,11 +3,8 @@ package com.example.pedrapapeltesoura
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.example.pedrapapeltesoura.databinding.ActivityDoisjogadoresBinding
 
 class DoisJogadoresActivity: AppCompatActivity() {
