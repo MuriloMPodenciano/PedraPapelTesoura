@@ -30,6 +30,12 @@ class DoisJogadoresActivity: AppCompatActivity() {
     private fun onPlayerChoice(playerChoice: String){
         val computerChoice = choices.random()
 
+        when (playerChoice) {
+            "pedra" -> adjb.pedraBt.setImageResource(R.drawable.rock2)
+            "papel" -> adjb.papelBt.setImageResource(R.drawable.paper2)
+            "tesoura" -> adjb.tesouraBt.setImageResource(R.drawable.scissor2)
+        }
+
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
             val winner = determineWinner(playerChoice, computerChoice)
@@ -50,5 +56,9 @@ class DoisJogadoresActivity: AppCompatActivity() {
     private fun showResult(winner: String, playerChoice: String, computerChoice: String) {
         val message = "Você: $playerChoice\nComputador: $computerChoice\nResultado: $winner"
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
+        adjb.pedraBt.setImageResource(R.drawable.rock1)
+        adjb.papelBt.setImageResource(R.drawable.paper1)
+        adjb.tesouraBt.setImageResource(R.drawable.scissor1)
     }
 }
