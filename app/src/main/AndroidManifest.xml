@@ -15,6 +15,9 @@
         <activity android:name=".DoisJogadoresActivity">
 
         </activity>
+        <activity android:name=".TresJogadoresActivity">
+
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -23,6 +23,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, DoisJogadoresActivity::class.java)
              startActivity(intent)
         }
+        amb.tresJogadoresBt.setOnClickListener {
+            val intent = Intent(this, TresJogadoresActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }
