@@ -36,6 +36,8 @@ class DoisJogadoresActivity: AppCompatActivity() {
             "pedra" -> adjb.pedraBt.setImageResource(R.drawable.rock2)
             "papel" -> adjb.papelBt.setImageResource(R.drawable.paper2)
             "tesoura" -> adjb.tesouraBt.setImageResource(R.drawable.scissor2)
+            "lagarto" -> adjb.papelBt.setImageResource(R.drawable.lagarto) //temporary
+            "spock" -> adjb.tesouraBt.setImageResource(R.drawable.spock) //temporary
         }
 
         val computerImageView = adjb.computadorIv
