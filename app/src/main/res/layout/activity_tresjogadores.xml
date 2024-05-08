@@ -59,12 +59,28 @@
             android:background="@null"
             android:src="@drawable/scissor1"
             />
+        <ImageButton android:id="@+id/lagartoBt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/lagarto"
+            />
+        <ImageButton android:id="@+id/spockBt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/spock"
+            />
     </LinearLayout>
 
     <TextView android:id="@+id/escolhaComputadorTv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="COMPUTADOR 1:"
+        android:text="COMPUTADOR:"
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="20dp"
@@ -79,7 +95,6 @@
         app:layout_constraintTop_toBottomOf="@id/escolhaComputadorTv1"
         android:src="@drawable/waiting"
         />
-
 
     <TextView android:id="@+id/escolhaComputadorTv2"
         android:layout_width="match_parent"

@@ -11,7 +11,7 @@ class DoisJogadoresActivity: AppCompatActivity() {
     private val adjb: ActivityDoisjogadoresBinding by lazy {
         ActivityDoisjogadoresBinding.inflate(layoutInflater)
     }
-    private val choices = listOf("pedra", "papel", "tesoura")
+    private val choices = listOf("pedra", "papel", "tesoura", "lagarto", "spock")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +24,8 @@ class DoisJogadoresActivity: AppCompatActivity() {
         adjb.pedraBt.setOnClickListener { onPlayerChoice("pedra") }
         adjb.papelBt.setOnClickListener { onPlayerChoice("papel") }
         adjb.tesouraBt.setOnClickListener { onPlayerChoice("tesoura")}
+        adjb.lagartoBt.setOnClickListener { onPlayerChoice("lagarto") }
+        adjb.spockBt.setOnClickListener { onPlayerChoice("spock")}
 
     }
 
@@ -41,6 +43,8 @@ class DoisJogadoresActivity: AppCompatActivity() {
             "pedra" -> computerImageView.setImageResource(R.drawable.rock2)
             "papel" -> computerImageView.setImageResource(R.drawable.paper2)
             "tesoura" -> computerImageView.setImageResource(R.drawable.scissor2)
+            "lagarto" -> computerImageView.setImageResource(R.drawable.lagarto)
+            "spock" -> computerImageView.setImageResource(R.drawable.spock)
         }
 
         val handler = Handler(Looper.getMainLooper())
@@ -53,9 +57,20 @@ class DoisJogadoresActivity: AppCompatActivity() {
     private fun determineWinner(playerChoice: String, computerChoice: String): String {
         return when {
             playerChoice == computerChoice -> "Empate"
+            //pedra
             (playerChoice == "pedra" && computerChoice == "tesoura") ||
+                    (playerChoice == "pedra" && computerChoice == "lagarto") ||
                     (playerChoice == "papel" && computerChoice == "pedra") ||
-                    (playerChoice == "tesoura" && computerChoice == "papel") -> "Você venceu!"
+                    (playerChoice == "spock" && computerChoice == "pedra") ||
+                    //papel (sem pedra)
+                    (playerChoice == "papel" && computerChoice == "spock") ||
+                    (playerChoice == "lagarto" && computerChoice == "papel") ||
+                    (playerChoice == "tesoura" && computerChoice == "papel") ||
+                    //tesoura (sem papel & pedra)
+                    (playerChoice == "tesoura" && computerChoice == "lagarto") ||
+                    (playerChoice == "spock" && computerChoice == "tesoura") ||
+                    //resto
+                    (playerChoice == "lagarto" && computerChoice == "spock")-> "Você venceu!"
             else -> "Você perdeu!"
         }
     }
@@ -67,5 +82,7 @@ class DoisJogadoresActivity: AppCompatActivity() {
         adjb.pedraBt.setImageResource(R.drawable.rock1)
         adjb.papelBt.setImageResource(R.drawable.paper1)
         adjb.tesouraBt.setImageResource(R.drawable.scissor1)
+        adjb.lagartoBt.setImageResource(R.drawable.lagarto) //temporary
+        adjb.spockBt.setImageResource(R.drawable.spock) //temporary
     }
 }
