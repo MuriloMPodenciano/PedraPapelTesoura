@@ -36,11 +36,24 @@ class TresJogadoresActivity : AppCompatActivity() {
             "tesoura" -> atjb.tesouraBt.setImageResource(R.drawable.scissor2)
         }
 
+        val computerImageView1 = atjb.computadorIv1
+        when (computerChoice1) {
+            "pedra" -> computerImageView1.setImageResource(R.drawable.rock2)
+            "papel" -> computerImageView1.setImageResource(R.drawable.paper2)
+            "tesoura" -> computerImageView1.setImageResource(R.drawable.scissor2)
+        }
+        val computerImageView2 = atjb.computadorIv2
+        when (computerChoice2) {
+            "pedra" -> computerImageView2.setImageResource(R.drawable.rock2)
+            "papel" -> computerImageView2.setImageResource(R.drawable.paper2)
+            "tesoura" -> computerImageView2.setImageResource(R.drawable.scissor2)
+        }
+
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
             val winner = determineWinner(playerChoice, computerChoice1, computerChoice2)
             showResult(winner, playerChoice, computerChoice1, computerChoice2)
-        }, 2000)
+        }, 1000)
     }
 
     private fun determineWinner(playerChoice: String, computerChoice1: String, computerChoice2: String): String {
@@ -53,7 +66,7 @@ class TresJogadoresActivity : AppCompatActivity() {
                     (playerChoice == "tesoura" && computerChoice1 == "pedra" && computerChoice2 == "tesoura") -> "Computador 1 venceu!"
             (playerChoice == "tesoura" && computerChoice1 == "tesoura" && computerChoice2 == "pedra") ||
                     (playerChoice == "pedra" && computerChoice1 == "pedra" && computerChoice2 == "papel") ||
-                    (playerChoice == "papel" && computerChoice1 == "papel" && computerChoice2 == "tesoura") -> "Computador 1 venceu!"
+                    (playerChoice == "papel" && computerChoice1 == "papel" && computerChoice2 == "tesoura") -> "Computador 2 venceu!"
             else -> "Empate!"
         }
     }

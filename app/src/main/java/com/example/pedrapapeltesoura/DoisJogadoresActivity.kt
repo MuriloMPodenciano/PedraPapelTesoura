@@ -47,7 +47,7 @@ class DoisJogadoresActivity: AppCompatActivity() {
         handler.postDelayed({
             val winner = determineWinner(playerChoice, computerChoice)
             showResult(winner, playerChoice, computerChoice)
-        }, 500)
+        }, 1000)
     }
 
     private fun determineWinner(playerChoice: String, computerChoice: String): String {
