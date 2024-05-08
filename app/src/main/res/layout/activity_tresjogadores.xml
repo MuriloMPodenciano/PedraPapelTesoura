@@ -14,31 +14,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button android:id="@+id/pedraBt"
-        android:layout_width="wrap_content"
+    <TextView android:id="@+id/ChoiceTv"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pedra"
-        android:textAllCaps="false"
+        android:text="SUA ESCOLHA:"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
         app:layout_constraintTop_toBottomOf="@id/mainTb"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        />
 
-    <Button android:id="@+id/papelBt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Papel"
-        android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@id/pedraBt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/ChoiceTv">
 
-    <Button android:id="@+id/tesouraBt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tesoura"
-        android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@id/papelBt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ImageButton android:id="@+id/pedraBt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/rock1"
+            />
+
+        <ImageButton android:id="@+id/papelBt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/paper1"
+            />
+
+        <ImageButton android:id="@+id/tesouraBt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/scissor1"
+            />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

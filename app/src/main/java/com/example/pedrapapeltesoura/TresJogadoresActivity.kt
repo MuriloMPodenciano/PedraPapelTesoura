@@ -30,11 +30,17 @@ class TresJogadoresActivity : AppCompatActivity() {
         val computerChoice1 = choices.random()
         val computerChoice2 = choices.random()
 
+        when (playerChoice) {
+            "pedra" -> atjb.pedraBt.setImageResource(R.drawable.rock2)
+            "papel" -> atjb.papelBt.setImageResource(R.drawable.paper2)
+            "tesoura" -> atjb.tesouraBt.setImageResource(R.drawable.scissor2)
+        }
+
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
             val winner = determineWinner(playerChoice, computerChoice1, computerChoice2)
             showResult(winner, playerChoice, computerChoice1, computerChoice2)
-        }, 3000)
+        }, 2000)
     }
 
     private fun determineWinner(playerChoice: String, computerChoice1: String, computerChoice2: String): String {
@@ -55,5 +61,9 @@ class TresJogadoresActivity : AppCompatActivity() {
     private fun showResult(winner: String, playerChoice: String, computerChoice1: String, computerChoice2: String) {
         val message = "Player 1: $playerChoice\nComputador 1: $computerChoice1\nComputador 2: $computerChoice2\nResultado: $winner"
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
+        atjb.pedraBt.setImageResource(R.drawable.rock1)
+        atjb.papelBt.setImageResource(R.drawable.paper1)
+        atjb.tesouraBt.setImageResource(R.drawable.scissor1)
     }
 }
