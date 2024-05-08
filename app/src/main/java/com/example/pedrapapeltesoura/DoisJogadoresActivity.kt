@@ -36,11 +36,18 @@ class DoisJogadoresActivity: AppCompatActivity() {
             "tesoura" -> adjb.tesouraBt.setImageResource(R.drawable.scissor2)
         }
 
+        val computerImageView = adjb.computadorIv
+        when (computerChoice) {
+            "pedra" -> computerImageView.setImageResource(R.drawable.rock2)
+            "papel" -> computerImageView.setImageResource(R.drawable.paper2)
+            "tesoura" -> computerImageView.setImageResource(R.drawable.scissor2)
+        }
+
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
             val winner = determineWinner(playerChoice, computerChoice)
             showResult(winner, playerChoice, computerChoice)
-        }, 2000)
+        }, 500)
     }
 
     private fun determineWinner(playerChoice: String, computerChoice: String): String {
