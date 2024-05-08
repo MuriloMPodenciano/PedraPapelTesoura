@@ -65,7 +65,7 @@
             android:layout_weight="1"
             android:scaleType="fitCenter"
             android:background="@null"
-            android:src="@drawable/lagarto"
+            android:src="@drawable/lagarto1"
             />
         <ImageButton android:id="@+id/spockBt"
             android:layout_width="0dp"
@@ -73,14 +73,14 @@
             android:layout_weight="1"
             android:scaleType="fitCenter"
             android:background="@null"
-            android:src="@drawable/spock"
+            android:src="@drawable/spock1"
             />
     </LinearLayout>
 
     <TextView android:id="@+id/escolhaComputadorTv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="COMPUTADOR:"
+        android:text="COMPUTADOR 1s:"
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="20dp"

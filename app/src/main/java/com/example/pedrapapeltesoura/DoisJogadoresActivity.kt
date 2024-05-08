@@ -36,8 +36,8 @@ class DoisJogadoresActivity: AppCompatActivity() {
             "pedra" -> adjb.pedraBt.setImageResource(R.drawable.rock2)
             "papel" -> adjb.papelBt.setImageResource(R.drawable.paper2)
             "tesoura" -> adjb.tesouraBt.setImageResource(R.drawable.scissor2)
-            "lagarto" -> adjb.papelBt.setImageResource(R.drawable.lagarto) //temporary
-            "spock" -> adjb.tesouraBt.setImageResource(R.drawable.spock) //temporary
+            "lagarto" -> adjb.papelBt.setImageResource(R.drawable.lagarto2)
+            "spock" -> adjb.tesouraBt.setImageResource(R.drawable.spock2)
         }
 
         val computerImageView = adjb.computadorIv
@@ -45,8 +45,8 @@ class DoisJogadoresActivity: AppCompatActivity() {
             "pedra" -> computerImageView.setImageResource(R.drawable.rock2)
             "papel" -> computerImageView.setImageResource(R.drawable.paper2)
             "tesoura" -> computerImageView.setImageResource(R.drawable.scissor2)
-            "lagarto" -> computerImageView.setImageResource(R.drawable.lagarto)
-            "spock" -> computerImageView.setImageResource(R.drawable.spock)
+            "lagarto" -> computerImageView.setImageResource(R.drawable.lagarto2)
+            "spock" -> computerImageView.setImageResource(R.drawable.spock2)
         }
 
         val handler = Handler(Looper.getMainLooper())
@@ -84,7 +84,7 @@ class DoisJogadoresActivity: AppCompatActivity() {
         adjb.pedraBt.setImageResource(R.drawable.rock1)
         adjb.papelBt.setImageResource(R.drawable.paper1)
         adjb.tesouraBt.setImageResource(R.drawable.scissor1)
-        adjb.lagartoBt.setImageResource(R.drawable.lagarto) //temporary
-        adjb.spockBt.setImageResource(R.drawable.spock) //temporary
+        adjb.lagartoBt.setImageResource(R.drawable.lagarto1)
+        adjb.spockBt.setImageResource(R.drawable.spock1)
     }
 }

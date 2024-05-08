@@ -36,8 +36,8 @@ class TresJogadoresActivity : AppCompatActivity() {
             "pedra" -> atjb.pedraBt.setImageResource(R.drawable.rock2)
             "papel" -> atjb.papelBt.setImageResource(R.drawable.paper2)
             "tesoura" -> atjb.tesouraBt.setImageResource(R.drawable.scissor2)
-            "lagarto" -> atjb.lagartoBt.setImageResource(R.drawable.lagarto) //temporary
-            "spock" -> atjb.spockBt.setImageResource(R.drawable.spock) //temporary
+            "lagarto" -> atjb.lagartoBt.setImageResource(R.drawable.lagarto2)
+            "spock" -> atjb.spockBt.setImageResource(R.drawable.spock2)
         }
 
         val computerImageView1 = atjb.computadorIv1
@@ -45,16 +45,16 @@ class TresJogadoresActivity : AppCompatActivity() {
             "pedra" -> computerImageView1.setImageResource(R.drawable.rock2)
             "papel" -> computerImageView1.setImageResource(R.drawable.paper2)
             "tesoura" -> computerImageView1.setImageResource(R.drawable.scissor2)
-            "lagarto" -> computerImageView1.setImageResource(R.drawable.lagarto)
-            "spock" -> computerImageView1.setImageResource(R.drawable.spock)
+            "lagarto" -> computerImageView1.setImageResource(R.drawable.lagarto2)
+            "spock" -> computerImageView1.setImageResource(R.drawable.spock2)
         }
         val computerImageView2 = atjb.computadorIv2
         when (computerChoice2) {
             "pedra" -> computerImageView2.setImageResource(R.drawable.rock2)
             "papel" -> computerImageView2.setImageResource(R.drawable.paper2)
             "tesoura" -> computerImageView2.setImageResource(R.drawable.scissor2)
-            "lagarto" -> computerImageView2.setImageResource(R.drawable.lagarto)
-            "spock" -> computerImageView2.setImageResource(R.drawable.spock)
+            "lagarto" -> computerImageView2.setImageResource(R.drawable.lagarto2)
+            "spock" -> computerImageView2.setImageResource(R.drawable.spock2)
         }
 
         val handler = Handler(Looper.getMainLooper())
@@ -161,7 +161,7 @@ class TresJogadoresActivity : AppCompatActivity() {
         atjb.pedraBt.setImageResource(R.drawable.rock1)
         atjb.papelBt.setImageResource(R.drawable.paper1)
         atjb.tesouraBt.setImageResource(R.drawable.scissor1)
-        atjb.lagartoBt.setImageResource(R.drawable.lagarto) //temporary
-        atjb.spockBt.setImageResource(R.drawable.spock) //temporary
+        atjb.lagartoBt.setImageResource(R.drawable.lagarto1)
+        atjb.spockBt.setImageResource(R.drawable.spock1)
     }
 }
